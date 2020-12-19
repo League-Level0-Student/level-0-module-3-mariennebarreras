@@ -8,6 +8,8 @@ import javax.swing.JOptionPane;
 import java.awt.Color;
 
 public class RobotColorChooser {
+	
+
 	public static void main(String[] args) {
 		
 		//1. Create a new Robot
@@ -17,14 +19,14 @@ public class RobotColorChooser {
 		// to make a square for example - do 4 pairs of move-then-turn 90
 		
 	    //2. Make the robot draw a shape (this will take more than one line of code)
-		rob.move(100);
-		rob.turn(90);
-		rob.move(100);
-		rob.turn(90);
-		rob.move(100);
-		rob.turn(90);
-		rob.move(100);
-		rob.turn(90);
+//		rob.move(100);
+//		rob.turn(90);
+//		rob.move(100);
+//		rob.turn(90);
+//		rob.move(100);
+//		rob.turn(90);
+//		rob.move(100);
+//		rob.turn(90);
 		rob.setSpeed(90);  //
 		//3. Set the pen width to 10
 		
@@ -32,7 +34,8 @@ public class RobotColorChooser {
 		
 		// to ask the user something:
 		// String userAnswer = JOptionPane.... do you remember that?  try it
-		
+	
+		for(int i=0;i<3;i++) { 
 		//4. Ask the user what color pen they would like the robot to draw with
 		String color = JOptionPane.showInputDialog(null, "What color pen would you like?"); 
 		
@@ -52,18 +55,36 @@ public class RobotColorChooser {
 		// right.  so can you fix the test condition in line 53 now like that
 		// fix this what do i putin the quotes?  a color of your choice
 		// good... BUT no semicolon after 'if' line  instead a pair of {}
+		// you typed "cyan"false
 		if(color.equals("blue")) {
+			rob.setPenColor(Color.blue);
 			// any idea how to tell the robot to draw in blue?nope
 			// type the name of teh robot then a period and choose one of the pulldown
 			// methods ...
-			// can you save your work or should I help you do that? can you help me
+			// can you save your work or should I help you do that? can you help me 
+		}
+		else if(color.equals("green")) {
+		   rob.setPenColor(Color.green);	
+		}
+		else {
+			rob.setPenColor(Color.ORANGE);
+			
 		}
         //6. If the user doesn't e!nter anything, choose a random color
-        //7. Put a loop around your code so that you keep asking the user for more colors & drawing them
+        //7. Put a loop aound your code so that you keep asking the user for more colors & drawing them
 		
-
+		 //2. Make the robot draw a shape (this will take more than one line of code)
+		rob.move(100);
+		rob.turn(90);
+		rob.move(100);
+		rob.turn(90);
+		rob.move(100);
+		rob.turn(90);
+		rob.move(100);
+		rob.turn(90);
+		rob.setSpeed(90); 
 		
-
+		}	// end of for loop
 
 
 	}
